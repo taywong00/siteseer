@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block head %}
+<!-- add additional style stuff
+<link href="../static/css/carousel.css" rel="stylesheet">
+-->
+{% endblock %}
+
+{% block title %}
+Home
+{% endblock %}
+
+
+{% block content %}
+<h1>Welcome to SiteSeer</h1>
+
+<form action="/search">
+    <input type="submit" value="Click to begin" />
+</form>
+<script>
+  console.log("button pressed");
+</script>
+{% endblock %}

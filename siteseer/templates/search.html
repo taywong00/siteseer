@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block head %}
+<!-- add additional style stuff
+<link href="../static/css/carousel.css" rel="stylesheet">
+-->
+{% endblock %}
+
+{% block title %}
+Search
+{% endblock %}
+
+
+{% block content %}
+<h1>Where do you want to go?</h1>
+
+<form action="/search" method="POST">
+    <input type="text" name="name" value="Name of location" />
+    <button type="submit">Search</button>
+</form>
+
+<form action="/directions" method="POST">
+  {% for location in results %}
+  <div>
+    <h3>{{location['name']}}</h3>
+    <p>{{location['address']}}</p>
+    <button type="submit">Go</button>
+  </div>
+  {% endfor %}
+</form>
+
+
+{% endblock %}
