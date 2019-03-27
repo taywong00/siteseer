@@ -14,21 +14,21 @@ import urllib.request, json
 # AutoML Vision
 project_id = 'siteseer'
 compute_region = 'us-central1'
-model_id = 'ICN6009315346241016353' # model 3 'ICN626954994675902736'
+model_id = 'ICN-----'
 file_path = '/home/pi/image.jpg'
 score_threshold = '0.5'
 response_display_name = ""
 
 # Firebase
 touch = 11
-firebase = firebase.FirebaseApplication('https://siteseer.firebaseio.com', None)
+firebase = firebase.FirebaseApplication('https://------.firebaseio.com', None)
 touch_original = firebase.get('restart', 'triggeredPressed')
 # firebase.put('restart', 'triggeredPressed', (not touch_original))
 firebase.put('restart', 'triggeredPressed', False)
 
 # Directions API
 endpoint = 'https://maps.googleapis.com/maps/api/directions/json?'
-api_key = 'AIzaSyCQHkbocf6E71_uh-O-6O_bvIj0JKZplBM'
+api_key = 'AIza----------'
 triggerDir_original = firebase.get('maps', 'trigger/1')
 firebase.put('maps', 'trigger/1', False)
 
